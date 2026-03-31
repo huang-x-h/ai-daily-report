@@ -1,0 +1,11 @@
+{
+  "name": "daily-reports",
+  "version": "1.0.0",
+  "description": "日报静态站点",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "npx serve docs",
+    "deploy": "git add . && git commit -m 'Update daily reports' && git push"
+  }
+}
