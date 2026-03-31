@@ -3,56 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 日报列表</title>
+    <title>AI 日报</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root { --primary: #6366f1; --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 60px 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .hero { text-align: center; margin-bottom: 50px; }
-        .hero h1 { color: white; font-size: 42px; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        .hero p { color: rgba(255,255,255,0.9); font-size: 18px; }
-        .reports { list-style: none; }
-        .report-item { background: white; border-radius: 16px; margin-bottom: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: all 0.3s; }
-        .report-item:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
-        .report-item a { display: flex; align-items: center; padding: 24px 28px; text-decoration: none; color: #333; }
-        .report-icon { font-size: 36px; margin-right: 20px; }
-        .report-content { flex: 1; }
-        .report-date { color: #667eea; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-        .report-title { font-size: 18px; font-weight: 500; color: #333; }
-        .report-arrow { color: #999; font-size: 20px; transition: transform 0.3s; }
-        .report-item:hover .report-arrow { transform: translateX(5px); color: #667eea; }
-        .footer { text-align: center; margin-top: 50px; color: rgba(255,255,255,0.7); font-size: 14px; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 28px; }
-            .report-item a { padding: 20px; }
-            .report-icon { font-size: 28px; margin-right: 15px; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); min-height: 100vh; }
+        .wrap { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
+        
+        .hero { text-align: center; margin-bottom: 48px; }
+        .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; margin-bottom: 20px; backdrop-filter: blur(10px); }
+        h1 { color: white; font-size: 48px; font-weight: 800; margin-bottom: 16px; text-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .desc { color: rgba(255,255,255,0.9); font-size: 18px; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+        
+        .stats { display: flex; justify-content: center; gap: 40px; margin-top: 32px; }
+        .stat { text-align: center; color: white; }
+        .stat-val { font-size: 32px; font-weight: 700; }
+        .stat-label { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+        
+        .section { margin-top: 48px; }
+        .section-title { color: white; font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+        
+        .card { display: block; background: white; border-radius: 16px; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 16px; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+        .inner { display: flex; align-items: center; padding: 24px; gap: 16px; }
+        .icon { font-size: 36px; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background: var(--bg); border-radius: 14px; }
+        .content { flex: 1; }
+        .date { color: var(--primary); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+        .title { color: #1e293b; font-size: 16px; font-weight: 600; line-height: 1.4; }
+        .arrow { color: #94a3b8; font-size: 20px; transition: transform 0.3s, color 0.3s; }
+        .card:hover .arrow { transform: translateX(6px); color: var(--primary); }
+        
+        .empty { text-align: center; padding: 60px 24px; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px); }
+        .empty-icon { font-size: 48px; margin-bottom: 16px; }
+        .empty h3 { color: white; font-size: 18px; margin-bottom: 8px; }
+        .empty p { color: rgba(255,255,255,0.7); font-size: 14px; }
+        
+        .footer { text-align: center; margin-top: 60px; color: rgba(255,255,255,0.7); font-size: 14px; }
+        .footer-tags { display: flex; justify-content: center; gap: 16px; margin-top: 16px; }
+        .tag { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px; font-size: 13px; }
+        
+        @media (max-width: 640px) {
+            .wrap { padding: 40px 16px; }
+            h1 { font-size: 32px; }
+            .stats { gap: 24px; }
+            .stat-val { font-size: 24px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hero">
-            <h1>📊 AI 日报</h1>
-            <p>每日自动汇总 GitHub 热门项目、Hacker News 话题和 arXiv 最新论文</p>
-        </div>
-        <ul class="reports">
-            
-        <li class="report-item">
-            <a href="/ai-daily-report-2026-03-31.html">
-                <div class="report-icon">📰</div>
-                <div class="report-content">
-                    <div class="report-date">ai-daily-report-2026-03-31</div>
-                    <div class="report-title">AI 资源日报 - 2026-03-31</div>
+    <div class="wrap">
+        <header class="hero">
+            <div class="badge"><span>🤖</span><span>每日 9:00 自动更新</span></div>
+            <h1>AI 日报</h1>
+            <p class="desc">每日汇总 GitHub 热门项目、Hacker News 热点和 arXiv 最新论文</p>
+            <div class="stats">
+                <div class="stat"><div class="stat-val">3</div><div class="stat-label">数据来源</div></div>
+                <div class="stat"><div class="stat-val">1</div><div class="stat-label">日报数量</div></div>
+            </div>
+        </header>
+        
+        <section class="section">
+            <h2 class="section-title">📋 最新日报</h2>
+            <a href="/ai-daily-report-2026-03-31.html" class="card">
+            <div class="inner">
+                <div class="icon">📰</div>
+                <div class="content">
+                    <div class="date">3月31日</div>
+                    <div class="title">AI 资源日报 - 2026-03-31</div>
                 </div>
-                <div class="report-arrow">→</div>
-            </a>
-        </li>
-    
-        </ul>
-        <div class="footer">
+                <div class="arrow">→</div>
+            </div>
+        </a>
+        </section>
+        
+        <footer class="footer">
             <p>🤖 自动生成于每日 9:00 (北京时间)</p>
-            <p style="margin-top: 8px;">📡 数据来源: GitHub API • Hacker News API • arXiv API</p>
-        </div>
+            <div class="footer-tags">
+                <span class="tag">📊 GitHub</span>
+                <span class="tag">📰 HN</span>
+                <span class="tag">📚 arXiv</span>
+                <span class="tag">🚀 Vercel</span>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
