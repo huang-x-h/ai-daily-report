@@ -9,16 +9,16 @@
 
 | 排名 | 项目 | 描述 | 星标 | 语言 |
 |------|------|------|------|------|
-| 1 | [RSSNext/Folo](https://github.com/RSSNext/Folo) | 🧡 Folo is the AI RSS Reader | 37,909 | TypeScript |
-| 2 | [PostHog/posthog](https://github.com/PostHog/posthog) | 🦔 PostHog is an all-in-one developer platform for ... | 32,332 | Python |
-| 3 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | Fair-code workflow automation platform with native... | 182,132 | TypeScript |
-| 4 | [nrwl/nx](https://github.com/nrwl/nx) | The Monorepo Platform that amplifies both develope... | 28,463 | TypeScript |
-| 5 | [electerm/electerm](https://github.com/electerm/electerm) | 📻Terminal/ssh/sftp/ftp/telnet/serialport/RDP/VNC/S... | 13,819 | JavaScript |
-| 6 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | Your own personal AI assistant. Any OS. Any Platfo... | 345,406 | TypeScript |
-| 7 | [agentscope-ai/CoPaw](https://github.com/agentscope-ai/CoPaw) | Your Personal AI Assistant; easy to install, deplo... | 14,221 | Python |
-| 8 | [doocs/md](https://github.com/doocs/md) | ✍ WeChat Markdown Editor | 一款高度简洁的微信 Markdown 编辑器：... | 12,165 | Vue |
-| 9 | [manaflow-ai/cmux](https://github.com/manaflow-ai/cmux) | Ghostty-based macOS terminal with vertical tabs an... | 12,212 | Swift |
-| 10 | [mlflow/mlflow](https://github.com/mlflow/mlflow) | The open source AI engineering platform for agents... | 25,069 | Python |
+| 1 | [PostHog/posthog](https://github.com/PostHog/posthog) | 🦔 PostHog is an all-in-one developer platform for ... | 32,332 | Python |
+| 2 | [jackwener/opencli](https://github.com/jackwener/opencli) | Make Any Website & Tool Your CLI. A universal CLI ... | 11,153 | TypeScript |
+| 3 | [alibaba/nacos](https://github.com/alibaba/nacos) | an easy-to-use dynamic service discovery, configur... | 32,783 | Java |
+| 4 | [Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode) | Kilo is the all-in-one agentic engineering platfor... | 17,514 | TypeScript |
+| 5 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | Fair-code workflow automation platform with native... | 182,133 | TypeScript |
+| 6 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | Your own personal AI assistant. Any OS. Any Platfo... | 345,419 | TypeScript |
+| 7 | [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi) | Free, local, open-source 24/7 Cowork app and OpenC... | 20,816 | TypeScript |
+| 8 | [oraios/serena](https://github.com/oraios/serena) | A powerful coding agent toolkit providing semantic... | 22,394 | Python |
+| 9 | [apache/airflow](https://github.com/apache/airflow) | Apache Airflow - A platform to programmatically au... | 44,857 | Python |
+| 10 | [wkentaro/labelme](https://github.com/wkentaro/labelme) | Image annotation with Python. Supports polygon, re... | 15,704 | Python |
 
 ---
 
@@ -26,11 +26,11 @@
 
 | 标题 | 得分 | 评论 | 链接 |
 |------|------|------|------|
-| IBM Announces Strategic Collaboration with Arm | 78 pts | 41 | [链接](https://newsroom.ibm.com/2026-04-02-ibm-announces-strategic-collaboration-with-arm-to-shape-the-future-of-enterprise-computing) |
-| Men are ditching TV for YouTube as AI usage and social media fatigue grow | 28 pts | 34 | [链接](https://www.ofcom.org.uk/media-use-and-attitudes/media-habits-adults/passive-social-media-use-ai-companionship-and-online-side-hustles-uk-adults-media-and-online-lives-revealed) |
-| Bringing Clojure programming to Enterprise (2021) | 58 pts | 8 | [链接](https://blogit.michelin.io/clojure-programming/) |
-| Artemis II Launch Day Updates | 942 pts | 804 | [链接](https://www.nasa.gov/blogs/missions/2026/04/01/live-artemis-ii-launch-day-updates/) |
-| Gone (Almost) Phishin' | 45 pts | 19 | [链接](https://ma.tt/2026/03/gone-almost-phishin/) |
+| IBM Announces Strategic Collaboration with Arm | 88 pts | 46 | [链接](https://newsroom.ibm.com/2026-04-02-ibm-announces-strategic-collaboration-with-arm-to-shape-the-future-of-enterprise-computing) |
+| Bringing Clojure programming to Enterprise (2021) | 61 pts | 9 | [链接](https://blogit.michelin.io/clojure-programming/) |
+| Artemis II Launch Day Updates | 947 pts | 808 | [链接](https://www.nasa.gov/blogs/missions/2026/04/01/live-artemis-ii-launch-day-updates/) |
+| Gone (Almost) Phishin' | 53 pts | 24 | [链接](https://ma.tt/2026/03/gone-almost-phishin/) |
+| Significant Raise of Reports | 21 pts | 9 | [链接](https://lwn.net/Articles/1065620/) |
 
 ---
 
@@ -159,4 +159,4 @@ Scientific algorithm discovery is iterative: hypotheses are proposed, implemente
 ---
 
 *本日报由 AI Daily Report Generator 自动生成*
-*生成时间: 2026-04-02 19:16:17*
+*生成时间: 2026-04-02 19:32:31*
