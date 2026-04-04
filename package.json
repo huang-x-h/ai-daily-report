@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "日报静态站点",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "type": "module",
   "scripts": {
