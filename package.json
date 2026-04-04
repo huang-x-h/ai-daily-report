@@ -2,6 +2,9 @@
   "name": "daily-reports",
   "version": "1.0.0",
   "description": "日报静态站点",
+  "engines": {
+    "node": ">=22"
+  },
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
