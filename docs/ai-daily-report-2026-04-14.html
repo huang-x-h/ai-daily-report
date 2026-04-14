@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 日报 - 2026-04-14</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --white: #ffffff;
+            --bg2: #f8fafc;
+            --text1: #1e293b;
+            --text2: #64748b;
+            --text3: #94a3b8;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); min-height: 100vh; color: var(--text1); line-height: 1.7; }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+        
+        .nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+        .nav-brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; font-weight: 700; font-size: 20px; }
+        .nav-btn { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 10px; text-decoration: none; color: white; font-weight: 500; backdrop-filter: blur(10px); transition: all 0.2s; }
+        .nav-btn:hover { background: rgba(255,255,255,0.3); transform: translateX(-4px); }
+        
+        .card { background: var(--white); border-radius: 24px; padding: 48px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        
+        .header { text-align: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 2px solid var(--border); }
+        .title { font-size: 34px; font-weight: 800; background: var(--bg); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+        .meta { display: flex; justify-content: center; gap: 24px; color: var(--text2); font-size: 14px; }
+        .meta span { display: flex; align-items: center; gap: 6px; }
+        
+        .main-title { font-size: 22px; font-weight: 700; color: var(--text1); margin: 40px 0 20px; padding-bottom: 12px; border-bottom: 3px solid var(--primary); }
+        .section-title { font-size: 17px; font-weight: 600; color: var(--text1); margin: 28px 0 14px; padding-left: 12px; border-left: 3px solid var(--primary); }
+        
+        .table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 12px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        thead { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+        th { color: white; padding: 14px 12px; text-align: left; font-weight: 600; white-space: nowrap; }
+        td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--text2); }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background: var(--bg2); }
+        tbody tr:nth-child(even) { background: rgba(248,250,252,0.5); }
+        
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-dark); text-decoration: underline; }
+        
+        ul.list-disc { list-style: none; margin: 16px 0; }
+        ul.list-disc li { position: relative; padding-left: 22px; margin-bottom: 10px; color: var(--text2); }
+        ul.list-disc li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        
+        p { margin-bottom: 14px; color: var(--text2); }
+        strong.hl { color: var(--primary); font-weight: 600; }
+        
+        code.code { background: var(--bg2); padding: 2px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ec4899; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 20px 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+        
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 36px 0; }
+        
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text3); font-size: 13px; }
+        .tags { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+        .tags span { background: var(--bg2); padding: 6px 14px; border-radius: 20px; font-size: 12px; }
+        
+        @media (max-width: 768px) {
+            .wrap { padding: 20px 16px; }
+            .card { padding: 24px; border-radius: 16px; }
+            .title { font-size: 26px; }
+            .meta { flex-wrap: wrap; gap: 12px; }
+            th, td { padding: 10px 8px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="nav">
+            <a href="/" class="nav-brand"><span>📊</span> AI 日报</a>
+            <a href="/" class="nav-btn">← 返回列表</a>
+        </nav>
+        
+        <main class="card">
+            <header class="header">
+                <h1 class="title">AI 资源日报</h1>
+                <div class="meta">
+                    <span>📅 2026-04-14</span>
+                    <span>•</span>
+                    <span>🤖 自动生成</span>
+                    <span>•</span>
+                    <span>📡 GitHub + HN + arXiv</span>
+                </div>
+            </header>
+            
+            <article><h1 class="page-title">AI 资源日报 - 2026-04-14</h1>
+<div class="divider"></div>
+<h2 class="main-title">GitHub 热门 AI 仓库 (今日更新)</h2>
+<div class="table-wrapper"><table><thead><tr><th>排名</th><th>项目</th><th>描述</th><th>星标</th><th>语言</th></tr></thead><tbody><tr><td>1</td><td><a href="https://github.com/langgenius/dify" target="_blank" rel="noopener">langgenius/dify</a></td><td>Production-ready platform for agentic workflow dev...</td><td>137,637</td><td>TypeScript</td></tr><tr><td>2</td><td><a href="https://github.com/punkpeye/awesome-mcp-servers" target="_blank" rel="noopener">punkpeye/awesome-mcp-servers</a></td><td>A collection of MCP servers.</td><td>84,740</td><td>-</td></tr><tr><td>3</td><td><a href="https://github.com/iOfficeAI/AionUi" target="_blank" rel="noopener">iOfficeAI/AionUi</a></td><td>Free, local, open-source 24/7 Cowork app and OpenC...</td><td>21,671</td><td>TypeScript</td></tr><tr><td>4</td><td><a href="https://github.com/CopilotKit/CopilotKit" target="_blank" rel="noopener">CopilotKit/CopilotKit</a></td><td>The Frontend Stack for Agents & Generative UI. Rea...</td><td>30,191</td><td>TypeScript</td></tr><tr><td>5</td><td><a href="https://github.com/MemPalace/mempalace" target="_blank" rel="noopener">MemPalace/mempalace</a></td><td>The highest-scoring AI memory system ever benchmar...</td><td>44,998</td><td>Python</td></tr><tr><td>6</td><td><a href="https://github.com/manaflow-ai/cmux" target="_blank" rel="noopener">manaflow-ai/cmux</a></td><td>Ghostty-based macOS terminal with vertical tabs an...</td><td>13,974</td><td>Swift</td></tr><tr><td>7</td><td><a href="https://github.com/google/adk-python" target="_blank" rel="noopener">google/adk-python</a></td><td>An open-source, code-first Python toolkit for buil...</td><td>18,954</td><td>Python</td></tr><tr><td>8</td><td><a href="https://github.com/mlflow/mlflow" target="_blank" rel="noopener">mlflow/mlflow</a></td><td>The open source AI engineering platform for agents...</td><td>25,339</td><td>Python</td></tr><tr><td>9</td><td><a href="https://github.com/supabase/supabase" target="_blank" rel="noopener">supabase/supabase</a></td><td>The Postgres development platform. Supabase gives ...</td><td>100,794</td><td>TypeScript</td></tr><tr><td>10</td><td><a href="https://github.com/koala73/worldmonitor" target="_blank" rel="noopener">koala73/worldmonitor</a></td><td>Real-time global intelligence dashboard. AI-powere...</td><td>48,157</td><td>TypeScript</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">Hacker News 热门技术话题</h2>
+<div class="table-wrapper"><table><thead><tr><th>标题</th><th>得分</th><th>评论</th><th>链接</th></tr></thead><tbody><tr><td>DaVinci Resolve releases Photo Editor</td><td>71 pts</td><td>14</td><td><a href="https://www.blackmagicdesign.com/products/davinciresolve/photo" target="_blank" rel="noopener">链接</a></td></tr><tr><td>Someone bought 30 WordPress plugins and planted a backdoor in all of them</td><td>768 pts</td><td>218</td><td><a href="https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/" target="_blank" rel="noopener">链接</a></td></tr><tr><td>GitHub Stacked PRs</td><td>510 pts</td><td>281</td><td><a href="https://github.github.com/gh-stack/" target="_blank" rel="noopener">链接</a></td></tr><tr><td>Lean proved this program correct; then I found a bug</td><td>142 pts</td><td>73</td><td><a href="https://kirancodes.me/posts/log-who-watches-the-watchers.html" target="_blank" rel="noopener">链接</a></td></tr><tr><td>A new spam policy for "back button hijacking"</td><td>15 pts</td><td>3</td><td><a href="https://developers.google.com/search/blog/2026/04/back-button-hijacking" target="_blank" rel="noopener">链接</a></td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">arXiv 最新 AI 论文深度分析 (cs.AI)</h2>
+<h3 class="section-title">1. Physics-Informed State Space Models for Reliable Solar Irradiance Forecasting in Off-Grid Systems</h3>
+<p><strong class="hl">作者</strong>: Mohammed Ezzaldin Babiker Abdullah</p>
+<p><strong class="hl">发布日期</strong>: 2026-04-13</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2604.11807v1" target="_blank" rel="noopener">http://arxiv.org/abs/2604.11807v1</a></p>
+<p><strong class="hl">关键词</strong>: Reinforcement Learning</p>
+<p><strong class="hl">类型</strong>: 应用研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>The stable operation of autonomous off-grid photovoltaic systems dictates reliance on solar forecasting algorithms that respect atmospheric thermodynamics. Contemporary deep learning models consistently exhibit critical anomalies, primarily severe temporal phase lags during cloud transients and phys...</p>
+<p><strong class="hl">研究意义</strong>: 强化学习在实际系统中的应用，具有重要的工程实践价值。</p>
+<div class="divider"></div>
+<h3 class="section-title">2. Detecting Safety Violations Across Many Agent Traces</h3>
+<p><strong class="hl">作者</strong>: Adam Stein, Davis Brown, Hamed Hassani et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-04-13</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2604.11806v1" target="_blank" rel="noopener">http://arxiv.org/abs/2604.11806v1</a></p>
+<p><strong class="hl">关键词</strong>: Safety & Ethics</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>To identify safety violations, auditors often search over large sets of agent traces. This search is difficult because failures are often rare, complex, and sometimes even adversarially hidden and only detectable when multiple traces are analyzed together. These challenges arise in diverse settings ...</p>
+<p><strong class="hl">研究意义</strong>: 关注 AI 系统的安全性和公平性，对负责任地部署 AI 具有重要指导意义。</p>
+<div class="divider"></div>
+<h3 class="section-title">3. Solving Physics Olympiad via Reinforcement Learning on Physics Simulators</h3>
+<p><strong class="hl">作者</strong>: Mihir Prabhudesai, Aryan Satpathy, Yangmin Li et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-04-13</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2604.11805v1" target="_blank" rel="noopener">http://arxiv.org/abs/2604.11805v1</a></p>
+<p><strong class="hl">关键词</strong>: LLM, Psychometrics</p>
+<p><strong class="hl">类型</strong>: 理论分析</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>We have witnessed remarkable advances in LLM reasoning capabilities with the advent of DeepSeek-R1. However, much of this progress has been fueled by the abundance of internet question-answer (QA) pairs, a major bottleneck going forward, since such data is limited in scale and concentrated mainly in...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">4. Budget-Aware Uncertainty for Radiotherapy Segmentation QA Using nnU-Net</h3>
+<p><strong class="hl">作者</strong>: Ricardo Coimbra Brioso, Lorenzo Mondo, Damiano Dei et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-04-13</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2604.11798v1" target="_blank" rel="noopener">http://arxiv.org/abs/2604.11798v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Accurate delineation of the Clinical Target Volume (CTV) is essential for radiotherapy planning, yet remains time-consuming and difficult to assess, especially for complex treatments such as Total Marrow and Lymph Node Irradiation (TMLI). While deep learning-based auto-segmentation can reduce worklo...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">5. C-ReD: A Comprehensive Chinese Benchmark for AI-Generated Text Detection Derived from Real-World Prompts</h3>
+<p><strong class="hl">作者</strong>: Chenxi Qing, Junxi Wu, Zheng Liu et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-04-13</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2604.11796v1" target="_blank" rel="noopener">http://arxiv.org/abs/2604.11796v1</a></p>
+<p><strong class="hl">关键词</strong>: LLM</p>
+<p><strong class="hl">类型</strong>: Benchmark</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Recently, large language models (LLMs) are capable of generating highly fluent textual content. While they offer significant convenience to humans, they also introduce various risks, like phishing and academic dishonesty. Numerous research efforts have been dedicated to developing algorithms for det...</p>
+<p><strong class="hl">研究意义</strong>: 提供新的评估基准，推动该领域的标准化研究。</p>
+<div class="divider"></div>
+<h2 class="main-title">论文趋势分析</h2>
+<h3 class="section-title">今日研究热点分布</h3>
+<div class="table-wrapper"><table><thead><tr><th>研究领域</th><th>论文数量</th></tr></thead><tbody><tr><td>LLM</td><td>2 篇</td></tr><tr><td>Reinforcement Learning</td><td>1 篇</td></tr><tr><td>Safety & Ethics</td><td>1 篇</td></tr><tr><td>Psychometrics</td><td>1 篇</td></tr></tbody></table></div>
+<h3 class="section-title">关键洞察</h3>
+<ul class="list-disc"><li><strong class="hl">AI 安全与伦理</strong>是当前研究热点，反映学术界对负责任 AI 的重视。</li><li><strong class="hl">强化学习</strong>持续受到关注，特别是在自主系统领域。</li></ul>
+<div class="divider"></div>
+<h2 class="main-title">本周技术趋势</h2>
+<div class="table-wrapper"><table><thead><tr><th>趋势</th><th>热度</th><th>相关项目</th></tr></thead><tbody><tr><td>AI Agent 平台</td><td>HIGH</td><td>Langflow, Dify, CrewAI</td></tr><tr><td>MCP 协议</td><td>MEDIUM</td><td>Claude Desktop, Cursor</td></tr><tr><td>AI Gateway</td><td>MEDIUM</td><td>LiteLLM, Portkey</td></tr><tr><td>本地 LLM</td><td>LOW</td><td>Ollama, llama.cpp</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">工具推荐</h2>
+<div class="table-wrapper"><table><thead><tr><th>工具</th><th>类型</th><th>星标</th><th>链接</th></tr></thead><tbody><tr><td>Langflow</td><td>AI Agent 平台</td><td>146,425</td><td>https://github.com/langflow-ai/langflow</td></tr><tr><td>n8n</td><td>工作流自动化</td><td>181,779</td><td>https://github.com/n8n-io/n8n</td></tr><tr><td>LiteLLM</td><td>AI Gateway</td><td>41,591</td><td>https://github.com/BerriAI/litellm</td></tr><tr><td>Ollama</td><td>本地 LLM</td><td>134,000+</td><td>https://ollama.ai</td></tr></tbody></table></div>
+<div class="divider"></div>
+<p><em>本日报由 AI Daily Report Generator 自动生成</em></p>
+<p><em>生成时间: 2026-04-14 03:56:10</em></p></article>
+            
+            <footer class="footer">
+                <p>🤖 本日报由 AI Daily Report Generator 自动生成</p>
+                <div class="tags">
+                    <span>🚀 Vercel</span>
+                    <span>📊 GitHub</span>
+                    <span>📚 arXiv</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
