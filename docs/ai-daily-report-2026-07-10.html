@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 日报 - 2026-07-10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --white: #ffffff;
+            --bg2: #f8fafc;
+            --text1: #1e293b;
+            --text2: #64748b;
+            --text3: #94a3b8;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); min-height: 100vh; color: var(--text1); line-height: 1.7; }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+        
+        .nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+        .nav-brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; font-weight: 700; font-size: 20px; }
+        .nav-btn { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 10px; text-decoration: none; color: white; font-weight: 500; backdrop-filter: blur(10px); transition: all 0.2s; }
+        .nav-btn:hover { background: rgba(255,255,255,0.3); transform: translateX(-4px); }
+        
+        .card { background: var(--white); border-radius: 24px; padding: 48px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        
+        .header { text-align: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 2px solid var(--border); }
+        .title { font-size: 34px; font-weight: 800; background: var(--bg); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+        .meta { display: flex; justify-content: center; gap: 24px; color: var(--text2); font-size: 14px; }
+        .meta span { display: flex; align-items: center; gap: 6px; }
+        
+        .main-title { font-size: 22px; font-weight: 700; color: var(--text1); margin: 40px 0 20px; padding-bottom: 12px; border-bottom: 3px solid var(--primary); }
+        .section-title { font-size: 17px; font-weight: 600; color: var(--text1); margin: 28px 0 14px; padding-left: 12px; border-left: 3px solid var(--primary); }
+        
+        .table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 12px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        thead { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+        th { color: white; padding: 14px 12px; text-align: left; font-weight: 600; white-space: nowrap; }
+        td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--text2); }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background: var(--bg2); }
+        tbody tr:nth-child(even) { background: rgba(248,250,252,0.5); }
+        
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-dark); text-decoration: underline; }
+        
+        ul.list-disc { list-style: none; margin: 16px 0; }
+        ul.list-disc li { position: relative; padding-left: 22px; margin-bottom: 10px; color: var(--text2); }
+        ul.list-disc li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        
+        p { margin-bottom: 14px; color: var(--text2); }
+        strong.hl { color: var(--primary); font-weight: 600; }
+        
+        code.code { background: var(--bg2); padding: 2px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ec4899; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 20px 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+        
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 36px 0; }
+        
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text3); font-size: 13px; }
+        .tags { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+        .tags span { background: var(--bg2); padding: 6px 14px; border-radius: 20px; font-size: 12px; }
+        
+        @media (max-width: 768px) {
+            .wrap { padding: 20px 16px; }
+            .card { padding: 24px; border-radius: 16px; }
+            .title { font-size: 26px; }
+            .meta { flex-wrap: wrap; gap: 12px; }
+            th, td { padding: 10px 8px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="nav">
+            <a href="/" class="nav-brand"><span>📊</span> AI 日报</a>
+            <a href="/" class="nav-btn">← 返回列表</a>
+        </nav>
+        
+        <main class="card">
+            <header class="header">
+                <h1 class="title">AI 资源日报</h1>
+                <div class="meta">
+                    <span>📅 2026-07-10</span>
+                    <span>•</span>
+                    <span>🤖 自动生成</span>
+                    <span>•</span>
+                    <span>📡 GitHub + HN + arXiv</span>
+                </div>
+            </header>
+            
+            <article><h1 class="page-title">AI 资源日报 - 2026-07-10</h1>
+<div class="divider"></div>
+<h2 class="main-title">🔥 GitHub 热门 AI 仓库</h2>
+<div class="table-wrapper"><table><thead><tr><th>排名</th><th>项目</th><th>描述</th><th>星标</th><th>语言</th></tr></thead><tbody><tr><td>1</td><td><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw/openclaw</a></td><td>Your own personal AI assistant. Any OS. Any Platfo...</td><td>382,382</td><td>TypeScript</td></tr><tr><td>2</td><td><a href="https://github.com/langgenius/dify" target="_blank" rel="noopener">langgenius/dify</a></td><td>Production-ready platform for agentic workflow dev...</td><td>148,353</td><td>TypeScript</td></tr><tr><td>3</td><td><a href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener">headroomlabs-ai/headroom</a></td><td>Compress tool outputs, logs, files, and RAG chunks...</td><td>58,213</td><td>Python</td></tr><tr><td>4</td><td><a href="https://github.com/dbeaver/dbeaver" target="_blank" rel="noopener">dbeaver/dbeaver</a></td><td>Free universal database tool and SQL client</td><td>50,937</td><td>Java</td></tr><tr><td>5</td><td><a href="https://github.com/rowboatlabs/rowboat" target="_blank" rel="noopener">rowboatlabs/rowboat</a></td><td>Open-source AI coworker, with memory</td><td>15,949</td><td>TypeScript</td></tr><tr><td>6</td><td><a href="https://github.com/koala73/worldmonitor" target="_blank" rel="noopener">koala73/worldmonitor</a></td><td>Real-time global intelligence dashboard. AI-powere...</td><td>61,654</td><td>TypeScript</td></tr><tr><td>7</td><td><a href="https://github.com/jlcodes99/cockpit-tools" target="_blank" rel="noopener">jlcodes99/cockpit-tools</a></td><td>🚀 通用 AI IDE 账号管理工具：支持 Antigravity / Codex / GitHu...</td><td>13,028</td><td>Rust</td></tr><tr><td>8</td><td><a href="https://github.com/usestrix/strix" target="_blank" rel="noopener">usestrix/strix</a></td><td>Open-source AI penetration testing tool to find an...</td><td>39,684</td><td>Python</td></tr><tr><td>9</td><td><a href="https://github.com/github/awesome-copilot" target="_blank" rel="noopener">github/awesome-copilot</a></td><td>Community-contributed instructions, agents, skills...</td><td>36,392</td><td>Python</td></tr><tr><td>10</td><td><a href="https://github.com/elizaOS/eliza" target="_blank" rel="noopener">elizaOS/eliza</a></td><td>Open source agentic operating system</td><td>18,719</td><td>TypeScript</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">📰 Hacker News AI 话题</h2>
+<div class="table-wrapper"><table><thead><tr></tr></thead><tbody><tr></tr><tr></tr><tr></tr><tr></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">💬 Reddit AI 社区热帖</h2>
+<p><em>暂无数据</em></p>
+<div class="divider"></div>
+<h2 class="main-title">📝 AI 博客 & 资讯</h2>
+<ul class="list-disc"><li><strong class="hl">[Synced Review]</strong> Adobe Research Unlocking Long-Term Memory in Video World Models with State-Space Models (Wed, 28 Ma)</li><li>By combining State-Space Models (SSMs) for efficient long-range dependency modeling with dense local... <a href="https://syncedreview.com/2025/05/28/adobe-research-unlocking-long-term-memory-in-video-world-models-with-state-space-models/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[NVIDIA Blog]</strong> NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness (Wed, 08 Ju)</li><li>NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with th... <a href="https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> Introducing Claude apps gateway for AWS (Wed, 08 Ju)</li><li>Today, we're announcing the Claude apps gateway for AWS, a self-hosted control plane that gives orga... <a href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-apps-gateway-for-aws/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> Powering scientific discovery: BYOKG and GraphRAG for intelligent pharmaceutical research (Wed, 08 Ju)</li><li>In this post, we explore how Graph-based Retrieval Augmented Generation (GraphRAG) is transforming s... <a href="https://aws.amazon.com/blogs/machine-learning/powering-scientific-discovery-byokg-and-graphrag-for-intelligent-pharmaceutical-research/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> Automatically sort and prioritize your mailboxes by using Amazon Bedrock (Wed, 08 Ju)</li><li>In this post, we show how organizations in the public sector can automate their email management usi... <a href="https://aws.amazon.com/blogs/machine-learning/automatically-sort-and-prioritize-your-mailboxes-by-using-amazon-bedrock/" target="_blank" rel="noopener">链接</a></li></ul>
+<div class="divider"></div>
+<h2 class="main-title">🇨🇳 中文 AI 资讯 (36氪/CSDN)</h2>
+<ul class="list-disc"><li><strong class="hl">[36氪]</strong> 36 氪 AI 测评小程序上新！看真实体验与深度测评，多个新功能等你来玩~ (2026-07-10) <a href="https://36kr.com/p/3883780969083137?f=rss" target="_blank" rel="noopener">链接</a></li></ul>
+<div class="divider"></div>
+<h2 class="main-title">📄 arXiv 最新 AI 论文 (cs.AI)</h2>
+<h3 class="section-title">1. OpenCoF: Learning to Reason Through Video Generation</h3>
+<p><strong class="hl">作者</strong>: Xinyan Chen, Ziyu Guo, Renrui Zhang et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-09</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.08763v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.08763v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Reasoning has become a core capability for large models, especially when reliable decisions require understanding logical consequences. Recent video generation models offer a reasoning path distinct from previous Chain-of-Thought (CoT): reasoning can unfold through temporally connected frames, known...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">2. Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation</h3>
+<p><strong class="hl">作者</strong>: Yifan Zhou, Qihao Yang, Yan Li et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-09</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.08758v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.08758v1</a></p>
+<p><strong class="hl">关键词</strong>: Reinforcement Learning</p>
+<p><strong class="hl">类型</strong>: Benchmark, 理论分析</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether AI systems can follow this inheritance structure. We present IdeaGene-Bench (IG-Be...</p>
+<p><strong class="hl">研究意义</strong>: 提供新的评估基准，推动该领域的标准化研究。</p>
+<div class="divider"></div>
+<h3 class="section-title">3. SLORR: Simple and Efficient In-Training Low-Rank Regularization</h3>
+<p><strong class="hl">作者</strong>: David González-Martínez, Shiwei Liu</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-09</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.08754v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.08754v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Low-rank factorization is widely used to compress neural networks, but modern models are often not naturally amenable to aggressive factorization without significant accuracy loss. Existing training-time low-rank regularizers can improve compressibility, but they often require SVDs of large weight m...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">4. Using AI-based Learning Assistants in Higher Education: A Large-Scale Descriptive Analysis</h3>
+<p><strong class="hl">作者</strong>: Kristina Schaaff, Quintus Stierstorfer, Valerie Heckel</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-09</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.08748v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.08748v1</a></p>
+<p><strong class="hl">关键词</strong>: Psychometrics</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>In this study, we present a large-scale descriptive analysis of the use of an AI-based learning assistant (Syntea) in higher education. Based on objective log data from 77,543 students enrolled in distance studies, we examine usage patterns across gender, age group, study cluster, degree, and study ...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">5. Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph</h3>
+<p><strong class="hl">作者</strong>: Duen Horng Chau, Donghao Ren, Fred Hohman et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-09</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.08746v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.08746v1</a></p>
+<p><strong class="hl">关键词</strong>: Reinforcement Learning</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>While UMAP is widely used for exploring high-dimensional data, typical workflows focus on its lower-dimensional embedding, largely overlooking the rich k-nearest-neighbor (kNN) graph that UMAP constructs internally. This graph encodes the data manifold in its original high-dimensional space, before ...</p>
+<p><strong class="hl">研究意义</strong>: 强化学习在实际系统中的应用，具有重要的工程实践价值。</p>
+<div class="divider"></div>
+<h2 class="main-title">论文趋势分析</h2>
+<h3 class="section-title">今日研究热点分布</h3>
+<div class="table-wrapper"><table><thead><tr><th>研究领域</th><th>论文数量</th></tr></thead><tbody><tr><td>Reinforcement Learning</td><td>2 篇</td></tr><tr><td>Psychometrics</td><td>1 篇</td></tr></tbody></table></div>
+<h3 class="section-title">关键洞察</h3>
+<ul class="list-disc"><li><strong class="hl">强化学习</strong>持续受到关注，特别是在自主系统领域。</li></ul>
+<div class="divider"></div>
+<h2 class="main-title">🛠️ 本周工具推荐</h2>
+<div class="table-wrapper"><table><thead><tr><th>工具</th><th>类型</th><th>说明</th></tr></thead><tbody><tr><td><a href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener">Langflow</a></td><td>AI Agent 平台</td><td>可视化 AI 工作流</td></tr><tr><td><a href="https://github.com/langgenius/dify" target="_blank" rel="noopener">Dify</a></td><td>AI 应用平台</td><td>开源 LLM 应用开发</td></tr><tr><td><a href="https://ollama.ai" target="_blank" rel="noopener">Ollama</a></td><td>本地 LLM</td><td>轻松运行本地大模型</td></tr><tr><td><a href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener">LiteLLM</a></td><td>AI Gateway</td><td>统一调用多种 LLM API</td></tr><tr><td><a href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener">n8n</a></td><td>工作流自动化</td><td>AI 自动化工作流</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">📊 技术趋势</h2>
+<div class="table-wrapper"><table><thead><tr><th>趋势</th><th>热度</th><th>说明</th></tr></thead><tbody><tr><td>AI Agent</td><td>🔥 HIGH</td><td>多智能体协作成为主流</td></tr><tr><td>MCP 协议</td><td>⭐ MEDIUM</td><td>Anthropic 推出的模型上下文协议</td></tr><tr><td>本地 LLM</td><td>⭐ MEDIUM</td><td>隐私优先的本地部署方案</td></tr><tr><td>AI Safety</td><td>⭐ MEDIUM</td><td>AI 安全与对齐研究升温</td></tr></tbody></table></div>
+<div class="divider"></div>
+<p><em>本日报由 AI Daily Report Generator v4.0 自动生成</em></p>
+<p><em>生成时间: 2026-07-10 04:41:58</em></p></article>
+            
+            <footer class="footer">
+                <p>🤖 本日报由 AI Daily Report Generator 自动生成</p>
+                <div class="tags">
+                    <span>🚀 Vercel</span>
+                    <span>📊 GitHub</span>
+                    <span>📚 arXiv</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
