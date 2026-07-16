@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 日报 - 2026-07-16</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --white: #ffffff;
+            --bg2: #f8fafc;
+            --text1: #1e293b;
+            --text2: #64748b;
+            --text3: #94a3b8;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); min-height: 100vh; color: var(--text1); line-height: 1.7; }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+        
+        .nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+        .nav-brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; font-weight: 700; font-size: 20px; }
+        .nav-btn { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 10px; text-decoration: none; color: white; font-weight: 500; backdrop-filter: blur(10px); transition: all 0.2s; }
+        .nav-btn:hover { background: rgba(255,255,255,0.3); transform: translateX(-4px); }
+        
+        .card { background: var(--white); border-radius: 24px; padding: 48px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        
+        .header { text-align: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 2px solid var(--border); }
+        .title { font-size: 34px; font-weight: 800; background: var(--bg); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+        .meta { display: flex; justify-content: center; gap: 24px; color: var(--text2); font-size: 14px; }
+        .meta span { display: flex; align-items: center; gap: 6px; }
+        
+        .main-title { font-size: 22px; font-weight: 700; color: var(--text1); margin: 40px 0 20px; padding-bottom: 12px; border-bottom: 3px solid var(--primary); }
+        .section-title { font-size: 17px; font-weight: 600; color: var(--text1); margin: 28px 0 14px; padding-left: 12px; border-left: 3px solid var(--primary); }
+        
+        .table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 12px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        thead { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+        th { color: white; padding: 14px 12px; text-align: left; font-weight: 600; white-space: nowrap; }
+        td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--text2); }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background: var(--bg2); }
+        tbody tr:nth-child(even) { background: rgba(248,250,252,0.5); }
+        
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-dark); text-decoration: underline; }
+        
+        ul.list-disc { list-style: none; margin: 16px 0; }
+        ul.list-disc li { position: relative; padding-left: 22px; margin-bottom: 10px; color: var(--text2); }
+        ul.list-disc li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        
+        p { margin-bottom: 14px; color: var(--text2); }
+        strong.hl { color: var(--primary); font-weight: 600; }
+        
+        code.code { background: var(--bg2); padding: 2px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ec4899; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 20px 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+        
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 36px 0; }
+        
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text3); font-size: 13px; }
+        .tags { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+        .tags span { background: var(--bg2); padding: 6px 14px; border-radius: 20px; font-size: 12px; }
+        
+        @media (max-width: 768px) {
+            .wrap { padding: 20px 16px; }
+            .card { padding: 24px; border-radius: 16px; }
+            .title { font-size: 26px; }
+            .meta { flex-wrap: wrap; gap: 12px; }
+            th, td { padding: 10px 8px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="nav">
+            <a href="/" class="nav-brand"><span>📊</span> AI 日报</a>
+            <a href="/" class="nav-btn">← 返回列表</a>
+        </nav>
+        
+        <main class="card">
+            <header class="header">
+                <h1 class="title">AI 资源日报</h1>
+                <div class="meta">
+                    <span>📅 2026-07-16</span>
+                    <span>•</span>
+                    <span>🤖 自动生成</span>
+                    <span>•</span>
+                    <span>📡 GitHub + HN + arXiv</span>
+                </div>
+            </header>
+            
+            <article><h1 class="page-title">AI 资源日报 - 2026-07-16</h1>
+<div class="divider"></div>
+<h2 class="main-title">🔥 GitHub 热门 AI 仓库</h2>
+<div class="table-wrapper"><table><thead><tr><th>排名</th><th>项目</th><th>描述</th><th>星标</th><th>语言</th></tr></thead><tbody><tr><td>1</td><td><a href="https://github.com/BasedHardware/omi" target="_blank" rel="noopener">BasedHardware/omi</a></td><td>AI that sees your screen, listens to your conversa...</td><td>13,017</td><td>Dart</td></tr><tr><td>2</td><td><a href="https://github.com/zeroclaw-labs/zeroclaw" target="_blank" rel="noopener">zeroclaw-labs/zeroclaw</a></td><td>Fast, small, and fully autonomous AI personal assi...</td><td>32,276</td><td>Rust</td></tr><tr><td>3</td><td><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw/openclaw</a></td><td>Your own personal AI assistant. Any OS. Any Platfo...</td><td>383,060</td><td>TypeScript</td></tr><tr><td>4</td><td><a href="https://github.com/SigNoz/signoz" target="_blank" rel="noopener">SigNoz/signoz</a></td><td>SigNoz is an open-source, OpenTelemetry-native obs...</td><td>29,812</td><td>TypeScript</td></tr><tr><td>5</td><td><a href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">hugohe3/ppt-master</a></td><td>AI generates a real, editable PowerPoint from any ...</td><td>39,292</td><td>Python</td></tr><tr><td>6</td><td><a href="https://github.com/jlcodes99/cockpit-tools" target="_blank" rel="noopener">jlcodes99/cockpit-tools</a></td><td>🚀 通用 AI IDE 账号管理工具：支持 Antigravity / Codex / GitHu...</td><td>13,562</td><td>Rust</td></tr><tr><td>7</td><td><a href="https://github.com/rowboatlabs/rowboat" target="_blank" rel="noopener">rowboatlabs/rowboat</a></td><td>Open-source AI coworker, with memory</td><td>16,532</td><td>TypeScript</td></tr><tr><td>8</td><td><a href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener">Comfy-Org/ComfyUI</a></td><td>The most powerful and modular diffusion model GUI,...</td><td>120,894</td><td>Python</td></tr><tr><td>9</td><td><a href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank" rel="noopener">esengine/DeepSeek-Reasonix</a></td><td>DeepSeek-native AI coding agent for your terminal....</td><td>27,031</td><td>Go</td></tr><tr><td>10</td><td><a href="https://github.com/OpenHands/OpenHands" target="_blank" rel="noopener">OpenHands/OpenHands</a></td><td>🙌 OpenHands: AI-Driven Development</td><td>80,924</td><td>Python</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">📰 Hacker News AI 话题</h2>
+<div class="table-wrapper"><table><thead><tr></tr></thead><tbody><tr></tr><tr></tr><tr></tr><tr></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">💬 Reddit AI 社区热帖</h2>
+<p><em>暂无数据</em></p>
+<div class="divider"></div>
+<h2 class="main-title">📝 AI 博客 & 资讯</h2>
+<ul class="list-disc"><li><strong class="hl">[Synced Review]</strong> Adobe Research Unlocking Long-Term Memory in Video World Models with State-Space Models (Wed, 28 Ma)</li><li>By combining State-Space Models (SSMs) for efficient long-range dependency modeling with dense local... <a href="https://syncedreview.com/2025/05/28/adobe-research-unlocking-long-term-memory-in-video-world-models-with-state-space-models/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[NVIDIA Blog]</strong> NVIDIA Introduces New Jetson Thor Computers to Advance Mainstream Robotics and Edge AI (Wed, 15 Ju)</li><li>General-purpose robots and autonomous machines are moving from research labs to real-world mass-mark... <a href="https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[NVIDIA Blog]</strong> NVIDIA and Japan Bring Full-Stack AI and Robotics to Every Industry (Wed, 15 Ju)</li><li>Home to leading manufacturers, robotics pioneers, infrastructure builders and iconic gaming companie... <a href="https://blogs.nvidia.com/blog/japan-ecosystem-2026/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> Built Technologies builds an AI-powered document intelligence solution on AWS to power agents across real estate finance (Wed, 15 Ju)</li><li>Built partnered with the AWS Generative AI Innovation Center (GenAIIC), AWS Partner AND Digital, and... <a href="https://aws.amazon.com/blogs/machine-learning/built-technologies-builds-an-ai-powered-document-intelligence-solution-on-aws-to-power-agents-across-real-estate-finance/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> Agentic vision: Building visual intelligence with Amazon Bedrock and MCP servers (Wed, 15 Ju)</li><li>In this post, we walk you through the Computer Vision MCP Server, which illustrates this approach, r... <a href="https://aws.amazon.com/blogs/machine-learning/agentic-vision-building-visual-intelligence-with-amazon-bedrock-and-mcp-servers/" target="_blank" rel="noopener">链接</a></li></ul>
+<div class="divider"></div>
+<h2 class="main-title">🇨🇳 中文 AI 资讯 (36氪/CSDN)</h2>
+<ul class="list-disc"><li><strong class="hl">[36氪]</strong> 大厂医疗AI战，开始“卷”减重 (2026-07-16) <a href="https://36kr.com/p/3896639942592134?f=rss" target="_blank" rel="noopener">链接</a></li><li><strong class="hl">[36氪]</strong> 众筹近400万美金，这家明星AI体育硬件公司做了款多合一教练机器人 ｜产品观察 (2026-07-16) <a href="https://36kr.com/p/3896586337978244?f=rss" target="_blank" rel="noopener">链接</a></li><li><strong class="hl">[36氪]</strong> 8点1氪丨国行苹果AI功能完成备案；三家共享单车上调起步价；知情人曝DeepSeek开始筹备IPO (2026-07-16) <a href="https://36kr.com/p/3897553391978371?f=rss" target="_blank" rel="noopener">链接</a></li></ul>
+<div class="divider"></div>
+<h2 class="main-title">📄 arXiv 最新 AI 论文 (cs.AI)</h2>
+<h3 class="section-title">1. Deep Interaction: An Efficient Human-AI Interaction Method for Large Reasoning Models</h3>
+<p><strong class="hl">作者</strong>: Hefeng Zhou, Jinxuan Zhang, Jiong Lou et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-15</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.14049v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.14049v1</a></p>
+<p><strong class="hl">关键词</strong>: LLM</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>The emergence of Chain-of-Thought (CoT) reasoning has significantly enhanced the ability of large language models (LLMs) to tackle complex, multi-step tasks. However, when errors occur, current interaction approaches typically involve re-generating another response that may make mistakes again, or u...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">2. Earthquaker-AI: A Retrieval-Augmented Generation Framework with Rubric-Based Assessment for Primary School Earthquake Education</h3>
+<p><strong class="hl">作者</strong>: Xanthi Kokkinou, Chaido Mizeli, Nafsika Koulaxidou et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-15</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.14046v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.14046v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 应用研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>This paper presents Earthquaker-AI, a hybrid educational framework building upon a previously implemented educational robotics project by integrating a conversational AI assistant based on Retrieval-Augmented Generation. It aims to enhance earthquake preparedness and conscious action among primary-s...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">3. AI-accelerated End-to-End Framework for Rapid Professional Upskilling</h3>
+<p><strong class="hl">作者</strong>: Tam Nguyen, Hung Nguyen, Robert Ogburn</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-15</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.14044v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.14044v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>By 2030, 59 of every 100 workers will need reskilling or upskilling, yet the average time to close an enterprise skills gap grew from roughly 3 days in 2014 to 36 days in 2018. Most current frameworks accelerate single stages of upskilling programs and generally lack industry validation. We present ...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">4. Multi-Expert Routing for Multi-Domain Low-Resource OCR: A Manchu Case Study</h3>
+<p><strong class="hl">作者</strong>: Zhan Chen, Jiqiao Ma, Chih-wen Kuo</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-15</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.14041v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.14041v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 理论分析</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Historical Manchu OCR must accommodate various visually distinct writing styles, including regular script, running script, and the semi-cursive chancery hand used in palace memorials, despite limited labeled data. We study a multi-expert system that reuses checkpoints from an iterative fine-tuning p...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">5. Early Adoption of Agentic Coding Tools by GitHub Projects</h3>
+<p><strong class="hl">作者</strong>: Maliha Noushin Raida, Daqing Hou</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-15</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.14037v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.14037v1</a></p>
+<p><strong class="hl">关键词</strong>: Multi-Agent</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Agentic coding tools are increasingly capable of generating and submitting pull requests (PRs) to software projects, introducing new forms of human-agent collaboration in software development. While prior studies have examined PR-level outcomes of agent-generated contributions, less is known about h...</p>
+<p><strong class="hl">研究意义</strong>: 多智能体协作研究，对分布式 AI 系统发展具有重要意义。</p>
+<div class="divider"></div>
+<h2 class="main-title">论文趋势分析</h2>
+<h3 class="section-title">今日研究热点分布</h3>
+<div class="table-wrapper"><table><thead><tr><th>研究领域</th><th>论文数量</th></tr></thead><tbody><tr><td>LLM</td><td>1 篇</td></tr><tr><td>Multi-Agent</td><td>1 篇</td></tr></tbody></table></div>
+<h3 class="section-title">关键洞察</h3>
+<ul class="list-disc"><li><strong class="hl">多智能体系统</strong>研究活跃，预示分布式 AI 应用的发展趋势。</li></ul>
+<div class="divider"></div>
+<h2 class="main-title">🛠️ 本周工具推荐</h2>
+<div class="table-wrapper"><table><thead><tr><th>工具</th><th>类型</th><th>说明</th></tr></thead><tbody><tr><td><a href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener">Langflow</a></td><td>AI Agent 平台</td><td>可视化 AI 工作流</td></tr><tr><td><a href="https://github.com/langgenius/dify" target="_blank" rel="noopener">Dify</a></td><td>AI 应用平台</td><td>开源 LLM 应用开发</td></tr><tr><td><a href="https://ollama.ai" target="_blank" rel="noopener">Ollama</a></td><td>本地 LLM</td><td>轻松运行本地大模型</td></tr><tr><td><a href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener">LiteLLM</a></td><td>AI Gateway</td><td>统一调用多种 LLM API</td></tr><tr><td><a href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener">n8n</a></td><td>工作流自动化</td><td>AI 自动化工作流</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">📊 技术趋势</h2>
+<div class="table-wrapper"><table><thead><tr><th>趋势</th><th>热度</th><th>说明</th></tr></thead><tbody><tr><td>AI Agent</td><td>🔥 HIGH</td><td>多智能体协作成为主流</td></tr><tr><td>MCP 协议</td><td>⭐ MEDIUM</td><td>Anthropic 推出的模型上下文协议</td></tr><tr><td>本地 LLM</td><td>⭐ MEDIUM</td><td>隐私优先的本地部署方案</td></tr><tr><td>AI Safety</td><td>⭐ MEDIUM</td><td>AI 安全与对齐研究升温</td></tr></tbody></table></div>
+<div class="divider"></div>
+<p><em>本日报由 AI Daily Report Generator v4.0 自动生成</em></p>
+<p><em>生成时间: 2026-07-16 03:53:36</em></p></article>
+            
+            <footer class="footer">
+                <p>🤖 本日报由 AI Daily Report Generator 自动生成</p>
+                <div class="tags">
+                    <span>🚀 Vercel</span>
+                    <span>📊 GitHub</span>
+                    <span>📚 arXiv</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
