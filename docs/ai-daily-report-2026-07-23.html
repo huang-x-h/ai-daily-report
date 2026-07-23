@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 日报 - 2026-07-23</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --white: #ffffff;
+            --bg2: #f8fafc;
+            --text1: #1e293b;
+            --text2: #64748b;
+            --text3: #94a3b8;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); min-height: 100vh; color: var(--text1); line-height: 1.7; }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+        
+        .nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+        .nav-brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; font-weight: 700; font-size: 20px; }
+        .nav-btn { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 10px; text-decoration: none; color: white; font-weight: 500; backdrop-filter: blur(10px); transition: all 0.2s; }
+        .nav-btn:hover { background: rgba(255,255,255,0.3); transform: translateX(-4px); }
+        
+        .card { background: var(--white); border-radius: 24px; padding: 48px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        
+        .header { text-align: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 2px solid var(--border); }
+        .title { font-size: 34px; font-weight: 800; background: var(--bg); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+        .meta { display: flex; justify-content: center; gap: 24px; color: var(--text2); font-size: 14px; }
+        .meta span { display: flex; align-items: center; gap: 6px; }
+        
+        .main-title { font-size: 22px; font-weight: 700; color: var(--text1); margin: 40px 0 20px; padding-bottom: 12px; border-bottom: 3px solid var(--primary); }
+        .section-title { font-size: 17px; font-weight: 600; color: var(--text1); margin: 28px 0 14px; padding-left: 12px; border-left: 3px solid var(--primary); }
+        
+        .table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 12px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        thead { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+        th { color: white; padding: 14px 12px; text-align: left; font-weight: 600; white-space: nowrap; }
+        td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--text2); }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background: var(--bg2); }
+        tbody tr:nth-child(even) { background: rgba(248,250,252,0.5); }
+        
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-dark); text-decoration: underline; }
+        
+        ul.list-disc { list-style: none; margin: 16px 0; }
+        ul.list-disc li { position: relative; padding-left: 22px; margin-bottom: 10px; color: var(--text2); }
+        ul.list-disc li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        
+        p { margin-bottom: 14px; color: var(--text2); }
+        strong.hl { color: var(--primary); font-weight: 600; }
+        
+        code.code { background: var(--bg2); padding: 2px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ec4899; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 20px 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+        
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 36px 0; }
+        
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text3); font-size: 13px; }
+        .tags { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+        .tags span { background: var(--bg2); padding: 6px 14px; border-radius: 20px; font-size: 12px; }
+        
+        @media (max-width: 768px) {
+            .wrap { padding: 20px 16px; }
+            .card { padding: 24px; border-radius: 16px; }
+            .title { font-size: 26px; }
+            .meta { flex-wrap: wrap; gap: 12px; }
+            th, td { padding: 10px 8px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="nav">
+            <a href="/" class="nav-brand"><span>📊</span> AI 日报</a>
+            <a href="/" class="nav-btn">← 返回列表</a>
+        </nav>
+        
+        <main class="card">
+            <header class="header">
+                <h1 class="title">AI 资源日报</h1>
+                <div class="meta">
+                    <span>📅 2026-07-23</span>
+                    <span>•</span>
+                    <span>🤖 自动生成</span>
+                    <span>•</span>
+                    <span>📡 GitHub + HN + arXiv</span>
+                </div>
+            </header>
+            
+            <article><h1 class="page-title">AI 资源日报 - 2026-07-23</h1>
+<div class="divider"></div>
+<h2 class="main-title">🔥 GitHub 热门 AI 仓库</h2>
+<div class="table-wrapper"><table><thead><tr><th>排名</th><th>项目</th><th>描述</th><th>星标</th><th>语言</th></tr></thead><tbody><tr><td>-</td><td>无法获取数据</td><td>-</td><td>-</td><td>-</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">📰 Hacker News AI 话题</h2>
+<div class="table-wrapper"><table><thead><tr></tr></thead><tbody><tr></tr><tr></tr><tr></tr><tr></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">💬 Reddit AI 社区热帖</h2>
+<p><em>暂无数据</em></p>
+<div class="divider"></div>
+<h2 class="main-title">📝 AI 博客 & 资讯</h2>
+<ul class="list-disc"><li><strong class="hl">[Synced Review]</strong> Adobe Research Unlocking Long-Term Memory in Video World Models with State-Space Models (Wed, 28 Ma)</li><li>By combining State-Space Models (SSMs) for efficient long-range dependency modeling with dense local... <a href="https://syncedreview.com/2025/05/28/adobe-research-unlocking-long-term-memory-in-video-world-models-with-state-space-models/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[NVIDIA Blog]</strong> NVIDIA Open Sources First GPU-Accelerated Medical Physics Simulation Framework (Wed, 22 Ju)</li><li>Before a healthcare robot can be useful in the real world, it has to learn how the physical world pu... <a href="https://blogs.nvidia.com/blog/medical-physics-simulation-open-source/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> AI Teammates: how monday.com runs production AI agents on Amazon Bedrock (Wed, 22 Ju)</li><li>AI Teammates are agentic AI on Amazon Bedrock, and few engineering organizations run them in product... <a href="https://aws.amazon.com/blogs/machine-learning/ai-teammates-how-monday-com-runs-production-ai-agents-on-amazon-bedrock/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[Synced Review]</strong> ByteDance Introduces Astra: A Dual-Model Architecture for Autonomous Robot Navigation (Tue, 24 Ju)</li><li>ByteDance introduces Astra, an innovative dual-model architecture revolutionizing robot navigation i... <a href="https://syncedreview.com/2025/06/24/bytedance-introduces-astra-a-dual-model-architecture-for-autonomous-robot-navigation/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[NVIDIA Blog]</strong> Built in Fort Worth: Wistron Opens Advanced Manufacturing Plant to Produce NVIDIA AI Systems (Tue, 21 Ju)</li><li>The AI era runs on AI infrastructure. Many of these advanced systems are built and tested in Texas. ... <a href="https://blogs.nvidia.com/blog/wistron-manufacturing-texas/" target="_blank" rel="noopener">链接</a></li></ul>
+<div class="divider"></div>
+<h2 class="main-title">🇨🇳 中文 AI 资讯 (36氪/CSDN)</h2>
+<ul class="list-disc"><li><strong class="hl">[36氪]</strong> 对话FutureTech张梦钊：从“一个人+一群Agent”到超级个体，AI正在重塑创业范式 (2026-07-23) <a href="https://36kr.com/p/3907639172027522?f=rss" target="_blank" rel="noopener">链接</a></li><li><strong class="hl">[36氪]</strong> 硬氪首发 | 大疆系AI自然探索公司获五源、顺为投资，首创水下光学系统 (2026-07-23) <a href="https://36kr.com/p/3906474040153220?f=rss" target="_blank" rel="noopener">链接</a></li><li><strong class="hl">[36氪]</strong> 对话蚂蚁数科：打造商业智能体超级工厂，生态共建中国行业版Harness标准 (2026-07-23) <a href="https://36kr.com/p/3907590205085056?f=rss" target="_blank" rel="noopener">链接</a></li><li><strong class="hl">[36氪]</strong> 36氪首发 | 同济博士做几何、物理AI重构设计制造，累计获超3亿元融资 (2026-07-23) <a href="https://36kr.com/p/3907532622648453?f=rss" target="_blank" rel="noopener">链接</a></li></ul>
+<div class="divider"></div>
+<h2 class="main-title">📄 arXiv 最新 AI 论文 (cs.AI)</h2>
+<h3 class="section-title">1. SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data</h3>
+<p><strong class="hl">作者</strong>: Wael AbdAlmageed</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-22</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.20402v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.20402v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>In many reasoning problems, the premises are not observed as discrete symbols, but must be inferred from high-dimensional inputs. Further, the predicate vocabulary, argument structure, and trusted evidence are supplied by a Knowledge Graph (KG), or rule definitions. Classical neuro-symbolic pipeline...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">2. Persian Pixel: A large-scale synthetic OCR dataset for Persian language</h3>
+<p><strong class="hl">作者</strong>: Pouria Mahdi, Haq Nawaz Malik</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-22</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.20385v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.20385v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Optical Character Recognition (OCR) for Persian remains substantially less mature than for Latin-script languages despite Persian being spoken by more than 110 million people across multiple countries. This gap arises from two fundamental challenges: the intrinsic complexity of the Perso-Arabic writ...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">3. FMRP-LEAN: A HIPAA-Compliant AI-Augmented LIMS Architecture for End-to-End Clinical Assay Workflow Optimization</h3>
+<p><strong class="hl">作者</strong>: Eva McCord, Ernest Pedapati, Zag ElSayed</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-22</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.20382v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.20382v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 理论分析</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Clinical biomarker workflows in translational research settings often rely on spreadsheet-driven tracking, manual quality control (QC) reconciliation, and loosely integrated systems, resulting in limited state visibility, delayed reporting, and increased operational risk. These challenges are partic...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">4. Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations</h3>
+<p><strong class="hl">作者</strong>: Hiskias Dingeto</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-22</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.20379v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.20379v1</a></p>
+<p><strong class="hl">关键词</strong>: AI/ML</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Natural-language autoencoders score explanations of hidden activations by reconstruction: an explanation is deemed faithful if the activation can be regenerated from it. The test is structurally insensitive to individual false claims: if flipping a claim does not change the reconstruction, the claim...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h3 class="section-title">5. Generative AI floods and dilutes the market for books</h3>
+<p><strong class="hl">作者</strong>: Tuhin Chakrabarty, Xinyue Liu, Jane C. Ginsburg et al.</p>
+<p><strong class="hl">发布日期</strong>: 2026-07-22</p>
+<p><strong class="hl">链接</strong>: <a href="http://arxiv.org/abs/2607.20349v1" target="_blank" rel="noopener">http://arxiv.org/abs/2607.20349v1</a></p>
+<p><strong class="hl">关键词</strong>: Generative AI</p>
+<p><strong class="hl">类型</strong>: 基础研究</p>
+<p><strong class="hl">核心内容</strong>:</p>
+<p>Generative AI can produce book-length works of fiction at near-zero cost. These books are often dismissed as low-quality ``slop'' that buyers will ignore, and are assumed to carry little commercial weight. We test that assumption with full-text AI detection across 14,419 self-published genre-fiction...</p>
+<p><strong class="hl">研究意义</strong>: 为该领域提供新的理论或方法贡献。</p>
+<div class="divider"></div>
+<h2 class="main-title">论文趋势分析</h2>
+<h3 class="section-title">今日研究热点分布</h3>
+<div class="table-wrapper"><table><thead><tr><th>研究领域</th><th>论文数量</th></tr></thead><tbody><tr><td>Generative AI</td><td>1 篇</td></tr></tbody></table></div>
+<h3 class="section-title">关键洞察</h3>
+<div class="divider"></div>
+<h2 class="main-title">🛠️ 本周工具推荐</h2>
+<div class="table-wrapper"><table><thead><tr><th>工具</th><th>类型</th><th>说明</th></tr></thead><tbody><tr><td><a href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener">Langflow</a></td><td>AI Agent 平台</td><td>可视化 AI 工作流</td></tr><tr><td><a href="https://github.com/langgenius/dify" target="_blank" rel="noopener">Dify</a></td><td>AI 应用平台</td><td>开源 LLM 应用开发</td></tr><tr><td><a href="https://ollama.ai" target="_blank" rel="noopener">Ollama</a></td><td>本地 LLM</td><td>轻松运行本地大模型</td></tr><tr><td><a href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener">LiteLLM</a></td><td>AI Gateway</td><td>统一调用多种 LLM API</td></tr><tr><td><a href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener">n8n</a></td><td>工作流自动化</td><td>AI 自动化工作流</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">📊 技术趋势</h2>
+<div class="table-wrapper"><table><thead><tr><th>趋势</th><th>热度</th><th>说明</th></tr></thead><tbody><tr><td>AI Agent</td><td>🔥 HIGH</td><td>多智能体协作成为主流</td></tr><tr><td>MCP 协议</td><td>⭐ MEDIUM</td><td>Anthropic 推出的模型上下文协议</td></tr><tr><td>本地 LLM</td><td>⭐ MEDIUM</td><td>隐私优先的本地部署方案</td></tr><tr><td>AI Safety</td><td>⭐ MEDIUM</td><td>AI 安全与对齐研究升温</td></tr></tbody></table></div>
+<div class="divider"></div>
+<p><em>本日报由 AI Daily Report Generator v4.0 自动生成</em></p>
+<p><em>生成时间: 2026-07-23 04:00:45</em></p></article>
+            
+            <footer class="footer">
+                <p>🤖 本日报由 AI Daily Report Generator 自动生成</p>
+                <div class="tags">
+                    <span>🚀 Vercel</span>
+                    <span>📊 GitHub</span>
+                    <span>📚 arXiv</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
