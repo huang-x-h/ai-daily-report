@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 日报 - 2026-08-20</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --white: #ffffff;
+            --bg2: #f8fafc;
+            --text1: #1e293b;
+            --text2: #64748b;
+            --text3: #94a3b8;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); min-height: 100vh; color: var(--text1); line-height: 1.7; }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+        
+        .nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+        .nav-brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; font-weight: 700; font-size: 20px; }
+        .nav-btn { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 10px; text-decoration: none; color: white; font-weight: 500; backdrop-filter: blur(10px); transition: all 0.2s; }
+        .nav-btn:hover { background: rgba(255,255,255,0.3); transform: translateX(-4px); }
+        
+        .card { background: var(--white); border-radius: 24px; padding: 48px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        
+        .header { text-align: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 2px solid var(--border); }
+        .title { font-size: 34px; font-weight: 800; background: var(--bg); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+        .meta { display: flex; justify-content: center; gap: 24px; color: var(--text2); font-size: 14px; }
+        .meta span { display: flex; align-items: center; gap: 6px; }
+        
+        .main-title { font-size: 22px; font-weight: 700; color: var(--text1); margin: 40px 0 20px; padding-bottom: 12px; border-bottom: 3px solid var(--primary); }
+        .section-title { font-size: 17px; font-weight: 600; color: var(--text1); margin: 28px 0 14px; padding-left: 12px; border-left: 3px solid var(--primary); }
+        
+        .table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 12px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        thead { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+        th { color: white; padding: 14px 12px; text-align: left; font-weight: 600; white-space: nowrap; }
+        td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--text2); }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background: var(--bg2); }
+        tbody tr:nth-child(even) { background: rgba(248,250,252,0.5); }
+        
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-dark); text-decoration: underline; }
+        
+        ul.list-disc { list-style: none; margin: 16px 0; }
+        ul.list-disc li { position: relative; padding-left: 22px; margin-bottom: 10px; color: var(--text2); }
+        ul.list-disc li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
+        
+        p { margin-bottom: 14px; color: var(--text2); }
+        strong.hl { color: var(--primary); font-weight: 600; }
+        
+        code.code { background: var(--bg2); padding: 2px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ec4899; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 20px 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+        
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 36px 0; }
+        
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text3); font-size: 13px; }
+        .tags { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+        .tags span { background: var(--bg2); padding: 6px 14px; border-radius: 20px; font-size: 12px; }
+        
+        @media (max-width: 768px) {
+            .wrap { padding: 20px 16px; }
+            .card { padding: 24px; border-radius: 16px; }
+            .title { font-size: 26px; }
+            .meta { flex-wrap: wrap; gap: 12px; }
+            th, td { padding: 10px 8px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="nav">
+            <a href="/" class="nav-brand"><span>📊</span> AI 日报</a>
+            <a href="/" class="nav-btn">← 返回列表</a>
+        </nav>
+        
+        <main class="card">
+            <header class="header">
+                <h1 class="title">AI 资源日报</h1>
+                <div class="meta">
+                    <span>📅 2026-08-20</span>
+                    <span>•</span>
+                    <span>🤖 自动生成</span>
+                    <span>•</span>
+                    <span>📡 GitHub + HN + arXiv</span>
+                </div>
+            </header>
+            
+            <article><h1 class="page-title">AI 资源日报 - 2026-08-20</h1>
+<div class="divider"></div>
+<h2 class="main-title">🔥 GitHub 热门 AI 仓库</h2>
+<div class="table-wrapper"><table><thead><tr><th>排名</th><th>项目</th><th>描述</th><th>星标</th><th>语言</th></tr></thead><tbody><tr><td>1</td><td><a href="https://github.com/can1357/oh-my-pi" target="_blank" rel="noopener">can1357/oh-my-pi</a></td><td>⌥  AI Coding agent for the terminal — hash-anchore...</td><td>25,889</td><td>TypeScript</td></tr><tr><td>2</td><td><a href="https://github.com/EKKOLearnAI/hermes-studio" target="_blank" rel="noopener">EKKOLearnAI/hermes-studio</a></td><td>Web dashboard for Hermes Agent — multi-platform AI...</td><td>10,440</td><td>TypeScript</td></tr><tr><td>3</td><td><a href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener">ruvnet/ruflo</a></td><td>🌊 The original agent meta-harness. Deploy intellig...</td><td>68,373</td><td>TypeScript</td></tr><tr><td>4</td><td><a href="https://github.com/InsForge/InsForge" target="_blank" rel="noopener">InsForge/InsForge</a></td><td>The all-in-one, open-source backend platform for a...</td><td>12,752</td><td>TypeScript</td></tr><tr><td>5</td><td><a href="https://github.com/PostHog/posthog" target="_blank" rel="noopener">PostHog/posthog</a></td><td>:hedgehog: PostHog is the leading platform for bui...</td><td>37,786</td><td>Python</td></tr><tr><td>6</td><td><a href="https://github.com/Arize-ai/phoenix" target="_blank" rel="noopener">Arize-ai/phoenix</a></td><td>AI Observability & Evaluation</td><td>11,118</td><td>Python</td></tr><tr><td>7</td><td><a href="https://github.com/opensandbox-group/OpenSandbox" target="_blank" rel="noopener">opensandbox-group/OpenSandbox</a></td><td>Secure, Fast, and Extensible Sandbox runtime for A...</td><td>14,350</td><td>Python</td></tr><tr><td>8</td><td><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw/openclaw</a></td><td>Your own personal AI assistant. Any OS. Any Platfo...</td><td>386,806</td><td>TypeScript</td></tr><tr><td>9</td><td><a href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener">BerriAI/litellm</a></td><td>The fastest, litest AI Gateway. Rust core with Pyt...</td><td>56,775</td><td>Python</td></tr><tr><td>10</td><td><a href="https://github.com/aaif-goose/goose" target="_blank" rel="noopener">aaif-goose/goose</a></td><td>an open source, extensible AI agent that goes beyo...</td><td>53,016</td><td>Rust</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">📰 Hacker News AI 话题</h2>
+<div class="table-wrapper"><table><thead><tr></tr></thead><tbody><tr></tr><tr></tr><tr></tr><tr></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">💬 Reddit AI 社区热帖</h2>
+<p><em>暂无数据</em></p>
+<div class="divider"></div>
+<h2 class="main-title">📝 AI 博客 & 资讯</h2>
+<ul class="list-disc"><li><strong class="hl">[Synced Review]</strong> Adobe Research Unlocking Long-Term Memory in Video World Models with State-Space Models (Wed, 28 Ma)</li><li>By combining State-Space Models (SSMs) for efficient long-range dependency modeling with dense local... <a href="https://syncedreview.com/2025/05/28/adobe-research-unlocking-long-term-memory-in-video-world-models-with-state-space-models/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> Domain and publish date filters for Web Search on AgentCore (Wed, 19 Au)</li><li>Web Search on Amazon Bedrock AgentCore now supports runtime domain and published-date filtering. New... <a href="https://aws.amazon.com/blogs/machine-learning/domain-and-publish-date-filters-for-web-search-on-agentcore/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> Automate Document Processing with Quick Automate and the IDP Accelerator (Wed, 19 Au)</li><li>Classifying, extracting, and validating high volumes of documents is a challenge across banking, ins... <a href="https://aws.amazon.com/blogs/machine-learning/automate-document-processing-with-quick-automate-and-the-idp-accelerator/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> Asynchronous patterns for calling Amazon Bedrock AgentCore agents in serverless pipelines (Wed, 19 Au)</li><li>In this post, you learn three serverless patterns (task-token callback, direct service integration, ... <a href="https://aws.amazon.com/blogs/machine-learning/asynchronous-patterns-for-calling-amazon-bedrock-agentcore-agents-in-serverless-pipelines/" target="_blank" rel="noopener">链接</a></li></ul>
+<ul class="list-disc"><li><strong class="hl">[AWS ML Blog]</strong> How Fanatics Betting and Gaming built a multi-agent customer support system (Wed, 19 Au)</li><li>Fanatics Betting and Gaming built a multi-agent customer support system on AWS to handle the complex... <a href="https://aws.amazon.com/blogs/machine-learning/how-fanatics-betting-and-gaming-built-a-multi-agent-customer-support-system/" target="_blank" rel="noopener">链接</a></li></ul>
+<div class="divider"></div>
+<h2 class="main-title">🇨🇳 中文 AI 资讯 (36氪/CSDN)</h2>
+<p><em>暂无数据</em></p>
+<div class="divider"></div>
+<h2 class="main-title">📄 arXiv 最新 AI 论文 (cs.AI)</h2>
+<p><em>无法获取 arXiv 数据</em></p>
+<div class="divider"></div>
+<h2 class="main-title">🛠️ 本周工具推荐</h2>
+<div class="table-wrapper"><table><thead><tr><th>工具</th><th>类型</th><th>说明</th></tr></thead><tbody><tr><td><a href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener">Langflow</a></td><td>AI Agent 平台</td><td>可视化 AI 工作流</td></tr><tr><td><a href="https://github.com/langgenius/dify" target="_blank" rel="noopener">Dify</a></td><td>AI 应用平台</td><td>开源 LLM 应用开发</td></tr><tr><td><a href="https://ollama.ai" target="_blank" rel="noopener">Ollama</a></td><td>本地 LLM</td><td>轻松运行本地大模型</td></tr><tr><td><a href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener">LiteLLM</a></td><td>AI Gateway</td><td>统一调用多种 LLM API</td></tr><tr><td><a href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener">n8n</a></td><td>工作流自动化</td><td>AI 自动化工作流</td></tr></tbody></table></div>
+<div class="divider"></div>
+<h2 class="main-title">📊 技术趋势</h2>
+<div class="table-wrapper"><table><thead><tr><th>趋势</th><th>热度</th><th>说明</th></tr></thead><tbody><tr><td>AI Agent</td><td>🔥 HIGH</td><td>多智能体协作成为主流</td></tr><tr><td>MCP 协议</td><td>⭐ MEDIUM</td><td>Anthropic 推出的模型上下文协议</td></tr><tr><td>本地 LLM</td><td>⭐ MEDIUM</td><td>隐私优先的本地部署方案</td></tr><tr><td>AI Safety</td><td>⭐ MEDIUM</td><td>AI 安全与对齐研究升温</td></tr></tbody></table></div>
+<div class="divider"></div>
+<p><em>本日报由 AI Daily Report Generator v4.0 自动生成</em></p>
+<p><em>生成时间: 2026-08-20 02:09:15</em></p></article>
+            
+            <footer class="footer">
+                <p>🤖 本日报由 AI Daily Report Generator 自动生成</p>
+                <div class="tags">
+                    <span>🚀 Vercel</span>
+                    <span>📊 GitHub</span>
+                    <span>📚 arXiv</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
